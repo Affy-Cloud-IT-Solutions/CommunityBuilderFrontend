@@ -1,7 +1,13 @@
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css"
 import { Home } from "./Pages/Home";
-import { NotFound } from "./Pages/NotFound";
+import { About } from "./Pages/About";
+import { Contact } from "./Pages/Contact";
+import { Developer } from "./Pages/Developer";
+import { Education } from "./Pages/Education";
+import {Tech} from "./Pages/Tech"
+import {Product} from "./Pages/Product"
+
 
 
 function App() {
@@ -9,8 +15,13 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />          
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Home />} />    
+          <Route path="/about" element={<About/>}/>  
+           <Route path="/contact" element={<Contact/>} />
+           <Route path="/Developer_community" element={<Developer/>}/>
+           <Route path="/education_finance" element={<Education/>}/>
+           <Route path="/tech_startup" element={<Tech/>}/>
+           <Route path="/product" element={<Product/>}/>
         </Routes>
       </Router>
     </div>

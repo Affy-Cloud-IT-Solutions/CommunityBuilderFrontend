@@ -58,23 +58,24 @@ export const Navbar = () => {
                     <div className={`nav-item dropdown ${isSolutionsOpen ? 'show' : ''}`}>
                         <a className="nav-link dropdown-toggle" onClick={handleSolutionsToggle}>Showcase</a>
                         <div className={`dropdown-menu m-0 ${isSolutionsOpen ? 'show' : ''}`}>
-                            <Link to='/sap_hxm' className="dropdown-item">Developer communities</Link>
-                            <Link to='/hana' className="dropdown-item">Education & Finance</Link>
-                            <Link to="/analytics" className="dropdown-item">Tech & Startups</Link>
-                            <Link to='/business' className="dropdown-item">Gaming Communities</Link>
+                            <Link to='/Developer_community' className="dropdown-item">Developer communities</Link>
+                            <Link to='/education_finance' className="dropdown-item">Education & Finance</Link>
+                            <Link to="/tech_startup" className="dropdown-item">Tech & Startups</Link>
+                            {/* <Link to='/business' className="dropdown-item">Gaming Communities</Link> */}
                         </div>
                     </div>
                     <li className="nav-item">
-                <a target="_blank" className="nav-link">Products</a>
-            </li>
-            <li className="nav-item">
-                <Link to="/contact" className="nav-link">Contact</Link>
-            </li>
-            <li className="nav-item">
-                <Link to="/community" className="nav-link">
-                    <button type="button" className="btn btn-primary">Join Community</button>
-                </Link>
-            </li>
+                        <Link to="/product" className="nav-link">Product</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/contact" className="nav-link">Contact</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/community" className="mx-3">
+                            <button type="button" className="btn join px-3 py-2">Join Community</button>
+
+                        </Link>
+                    </li>
                 </div>
             </div>
         </nav>
