@@ -9,6 +9,7 @@ import {Tech} from "./Pages/Tech"
 import {Product} from "./Pages/Product"
 import { AllCommunity } from "./Pages/AllCommunity";
 import { CommunityById } from "./Pages/CommunityById";
+import { TalkDash } from "./Pages/TalkDash";
 
 
 
@@ -26,6 +27,7 @@ function App() {
            <Route path="/product" element={<Product/>}/>
            <Route path="/all_community" element={<AllCommunity/>}/>
            <Route path="/Community_id" element={<CommunityById/>}/>
+           <Route path="/Community_dash" element={<TalkDash/>}/>
         </Routes>
       </Router>
     </div>

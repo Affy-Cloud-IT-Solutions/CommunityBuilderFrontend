@@ -81,7 +81,7 @@ export const Contact = () => {
                           <p className="real mt-4">Provide real value to your audience. Talk with us to find out how.</p>  
                           <button class="btn mt-3 py-md-3 px-md-5 me-3 rounded-pill quote_btn animated slideInLeft">Get In Touch</button>
                         </div>
-                    </div>             
+                    </div>      
                                                    
                     
                 </div>

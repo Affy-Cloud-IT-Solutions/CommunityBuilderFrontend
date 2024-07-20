@@ -423,7 +423,15 @@ footer p {
   border: 1px solid black;
   color: #000 !important;
 }
-
+.join_btn{
+  border: 1px solid rgba(0, 0, 0, 0.603);
+  border-radius: 30px;
+}
+.join_btn:hover {
+  border: 1px solid black;
+  color: #000 !important;
+  background-color: #f7b0099f;
+}
 /* ------------------------------------end---------------- */
 .navvvv a {
   text-decoration: none;
@@ -1083,7 +1091,44 @@ h6,
   background-color: #dce0fd;
   height: 80vh;
 }
+.Community_header_talk {
+  background-color: #dce0fd;
+  height: 20vh;
+}
+.talk_main{
+  background-color: #dce0fd;
+  
 
+}
+.blog_section{
+  border: 1px solid rgba(0, 0, 0, 0.404);
+  border-bottom: none;
+  padding: 2% 2%;
+  transition: .5s;
+
+}
+.blog_section:hover{
+  background-color: rgba(255, 255, 255, 0.486);
+}
+.blog_section:last-child{
+  border: 1px solid rgba(0, 0, 0, 0.404);
+}
+.event_section{
+  border: 1px solid rgba(0, 0, 0, 0.404);
+}
+.event_section1{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+}
+.comment{
+  border: none;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+  
+}
+.comment:hover{
+  color: #f7ae09;
+}
 @media (max-width: 600px) {
   .Community_header {
     height: 60vh;
@@ -1139,6 +1184,9 @@ h6,
   font-weight: 600;
   font-size: 19px;
 }
+.profile_pic{
+  border-radius: 50px;
+}
 
 .name {
   border: 1px solid black !important;
@@ -1152,11 +1200,15 @@ h6,
   }
 }
 
-.quote_btn,
+.quote_btn,.quote_btn3,
 .quote_btn1 {
   background-color: #f7ae09;
 }
+.quote_btn3:hover{
+  border: 1px solid black;
 
+
+}
 .quote_btn:hover {
   border: 1px solid white;
   color: white;
@@ -1173,6 +1225,47 @@ h6,
   background-color: #f7ae09;
   border: 2px solid #f7ae09 !important;
 
+}
+/* styles.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  max-width: 50%;
+  height: 80%;
+  overflow: auto;
+}
+@media only screen and (max-width: 600px) {
+  .modal-content{
+    max-width: 80%;
+  height: 50%;
+  }
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .content {
