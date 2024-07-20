@@ -7,7 +7,7 @@ import logo from "../img/logoo.png"
 export const Footer = () => {
     return (
         <div>
-            <footer class="text-center text-lg-start bg-body-tertiary text-muted footer-bg pt-5" >
+            <footer class="text-center text-lg-start text-muted footer-bg pt-5" >
                 <section class="">
                     <div class="container text-center text-md-start">
 
@@ -23,7 +23,7 @@ export const Footer = () => {
 
                             <div class="col-md-3 col-lg-3 col-xl-3 ">
                                 <div className=" position-relative pb-3 mb-3 mx-auto" style={{ maxWidth: '400px' }}>
-                                    <h3 className="mb-0 "> Showcase</h3>
+                                    <h4 className="mb-0 "> Showcase</h4>
                                 </div>
                                 <p>
                                     <Link to="/sap_hxm"><a class="text-reset mt-3 talk1 talk">Developer communities</a></Link>
@@ -41,7 +41,7 @@ export const Footer = () => {
                             </div>
 
                             <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
-                                <h3 className="mb-4 "><span className='color'></span>Useful Links</h3>
+                                <h4 className="mb-4 "><span className='color'></span>Useful Links</h4>
                                 <Link to="/" ><a><p className='talk'>Home</p></a></Link>
 
                                 <Link to="/about" > <a><p className='talk'>About</p></a></Link>
@@ -52,7 +52,7 @@ export const Footer = () => {
                             </div>
 
                             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                <h3 className="mb-4 "><span className='color'></span>Contact</h3>
+                                <h4 className="mb-4 "><span className='color'></span>Contact</h4>
                                 <p><i class="fas fa-home me-3"></i>104, Nasheman Firoza Apartments, Koh-e-fiza, Bhopal Madhya
                                     Pradesh,
                                     462030</p>
@@ -67,21 +67,21 @@ export const Footer = () => {
                 </section>
 
                 <div class="text-center lastf">
-                    <p class="text-white my-2">© 2024
+                    <p class="text-black my-2">© 2024
                         <a href="#" class="fw-bold text-affy"> OneConnect org.</a> All Rights Reserved
                     </p>
                     <div class="social-icons d-flex justify-content-center">
                         <a href="https://www.instagram.com/affy_cloud/?igsh=MXE1YXpuN3VrOTZwYw%3D%3D" target="_blank" rel="noreferrer" class="me-4 insta">
-                            <i class="fab fa-instagram text-white"></i>
+                            <i class="fab fa-instagram text-black"></i>
                         </a>
                         <a target="_blank" class="me-4 whatsapp">
-                            <i class="fab fa-whatsapp text-white"></i>
+                            <i class="fab fa-whatsapp text-black"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/affy-cloud-2b6137309/" rel="noreferrer" target="_blank" class="me-4 linkdlin">
-                            <i class="fab fa-linkedin text-white"></i>
+                            <i class="fab fa-linkedin text-black"></i>
                         </a>
                         <a href="https://www.youtube.com/@affycloud" rel="noreferrer" target="_blank" class="youtube">
-                            <i class="fab fa-youtube text-white"></i>
+                            <i class="fab fa-youtube text-black"></i>
                         </a>
                     </div>
                 </div>

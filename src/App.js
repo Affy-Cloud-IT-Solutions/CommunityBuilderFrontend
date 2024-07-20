@@ -7,6 +7,8 @@ import { Developer } from "./Pages/Developer";
 import { Education } from "./Pages/Education";
 import {Tech} from "./Pages/Tech"
 import {Product} from "./Pages/Product"
+import { AllCommunity } from "./Pages/AllCommunity";
+import { CommunityById } from "./Pages/CommunityById";
 
 
 
@@ -22,6 +24,8 @@ function App() {
            <Route path="/education_finance" element={<Education/>}/>
            <Route path="/tech_startup" element={<Tech/>}/>
            <Route path="/product" element={<Product/>}/>
+           <Route path="/all_community" element={<AllCommunity/>}/>
+           <Route path="/Community_id" element={<CommunityById/>}/>
         </Routes>
       </Router>
     </div>

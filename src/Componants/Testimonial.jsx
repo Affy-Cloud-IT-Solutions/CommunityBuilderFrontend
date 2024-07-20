@@ -7,8 +7,8 @@ export const Testimonial = () => {
             <Carousel.Item>
                 <div className='container'>
                     <div className='col-12'>
-                        <h2 className='soft mt-2 mx-2'>Why OneConnect <span className='px-2'>forum software?</span></h2>
-                        <p className=' second mt-5 text-center px-2'>"We have considerable prior experience with several other well-known forums, and OneConnect beats all of them for our needs, including safety and security for minors, simplicity of use, reliability for academic records, stability under heavy load, and richness of features sufficient to even engage media-saturated teens.<span> Schools are not big money customers, but the OneConnect team always treats us like we are important to them."</span></p>
+                        <h2 className='soft mt-2 mx-2'>Why OneConnect <span className='px-1'> forum software?</span></h2>
+                        <p className=' second mt-5 text-center'>"We have considerable prior experience with several other well-known forums, and OneConnect beats all of them for our needs, including safety and security for minors, simplicity of use, reliability for academic records, stability under heavy load, and richness of features sufficient to even engage media-saturated teens.<span> Schools are not big money customers, but the OneConnect team always treats us like we are important to them."</span></p>
                         <div className='profile_section mb-5'>
                             <div className='pro'>
                                 <img className=' pro_img' src='https://i.pinimg.com/280x280_RS/79/dd/11/79dd11a9452a92a1accceec38a45e16a.jpg' alt=''/>

@@ -81,31 +81,31 @@ export const Product = () => {
             </div>
             <div className="col-lg-6" style={{ minHeight: '400px' }}>
               <div className="position-relative h-100">
-                <img className="position-absolute w-100  h-100 rounded " src="https://nodebb.org/wp-content/uploads/2021/09/Group-3707-2.png" alt=''/>
+                <img className="position-absolute w-100  h-100 rounded " src="https://nodebb.org/wp-content/uploads/2021/09/Group-3707-2.png" alt='' />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="container-fluid bb0 bb00">
-                <div className="container md-py-5">
-                    <div className="row flex-lg-row-reverse">
-                        <div className="col-lg-6 order-lg-2" style={{ minHeight: '400px' }}>
-                            <div className="position-relative h-100">
-                                <img className="position-absolute w-100 h-100 rounded" src="https://nodebb.org/wp-content/uploads/2021/09/Group-3673-2.png" alt="" />
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mt-5 order-lg-1">
-                            <div>
-                                <p className="foster">
-                                Real-time Analytics Dashboard</p>
-                            </div>
-                            <p className="at">Be in control with access to trending content, user activity, and other forum metrics. Create custom reports for any user actions. Then export the data into your favourite analytics software.</p>
-                        </div>
-                    </div>
-                </div>
+        <div className="container md-py-5">
+          <div className="row flex-lg-row-reverse">
+            <div className="col-lg-6 order-lg-2" style={{ minHeight: '400px' }}>
+              <div className="position-relative h-100">
+                <img className="position-absolute w-100 h-100 rounded" src="https://nodebb.org/wp-content/uploads/2021/09/Group-3673-2.png" alt="" />
+              </div>
             </div>
-            <div class="container-fluid last" >
+            <div className="col-lg-6 mt-5 order-lg-1">
+              <div>
+                <p className="foster">
+                  Real-time Analytics Dashboard</p>
+              </div>
+              <p className="at">Be in control with access to trending content, user activity, and other forum metrics. Create custom reports for any user actions. Then export the data into your favourite analytics software.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid last" >
         <div class="container py-5">
           <div class="row g-5">
             <div className='col-12'>

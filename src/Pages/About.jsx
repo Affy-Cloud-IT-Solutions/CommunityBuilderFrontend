@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { Navbar } from "../Componants/Navbar"
 import { Footer } from '../Componants/Footer'
@@ -42,7 +43,7 @@ export const About = () => {
             <div class="col-md-6 para">
                 <h2 class="are">Our community <span class="px-4">motivates us</span></h2>
                 <p class="mt-5">We want to give a shout-out to the pros in our very own community support forum. Every day our members help us improve our product and push us to find creative solutions. We wouldn’t be where we are today without their support.</p>
-                <button class="btn mt-3 py-md-3 px-md-4 me-3 rounded-pill quote_btn2 animated slideInLeft">Join the Community</button>
+               <Link to="/all_community"> <button class="btn mt-3 py-md-3 px-md-4 me-3 rounded-pill quote_btn2 animated slideInLeft">Join the Community</button></Link>
             </div>
         </div>
     </div>

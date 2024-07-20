@@ -61,7 +61,7 @@ export const Navbar = () => {
                             <Link to='/Developer_community' className="dropdown-item">Developer communities</Link>
                             <Link to='/education_finance' className="dropdown-item">Education & Finance</Link>
                             <Link to="/tech_startup" className="dropdown-item">Tech & Startups</Link>
-                            {/* <Link to='/business' className="dropdown-item">Gaming Communities</Link> */}
+                            <Link to='/Community_id' className="dropdown-item">demo</Link>
                         </div>
                     </div>
                     <li className="nav-item">
@@ -71,8 +71,8 @@ export const Navbar = () => {
                         <Link to="/contact" className="nav-link">Contact</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/community" className="mx-3">
-                            <button type="button" className="btn join px-3 py-2">Join Community</button>
+                        <Link to="/all_community" className="mx-3">
+                            <button type="button" className="btn join px-3 py-2">All Communities</button>
 
                         </Link>
                     </li>
