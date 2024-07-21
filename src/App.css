@@ -36,7 +36,7 @@ body {
 }
 
 .kha {
-  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/070/755/small/abstract-white-and-gray-geometric-shine-and-layer-element-background-with-halftone-effect-vector.jpg");
+  background-image: url("https://img.freepik.com/premium-photo/abstract-hd-blue-background-light-blue-color-theme-with-3d-geometry-pattern_1000823-2007.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 2%;
@@ -85,7 +85,7 @@ body {
 }
 
 .bb0 {
-  background-color: #D5DAE1;
+  background-color: #dce0fd ;
 }
 
 .help {
@@ -626,15 +626,15 @@ h6,
 @media (max-width: 991.98px) {
   .sticky-top.navbar-dark {
     position: relative;
-    background: #000;
+    /* background: #000; */
   }
 
   .navbar-dark .navbar-nav .nav-link,
   .navbar-dark .navbar-nav .nav-link.show,
   .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 10px 0;
-    color: white;
-    background-color: #000;
+    color: black;
+    /* background-color: #000; */
   }
 
   .navbar-dark .navbar-brand h1 {
@@ -1083,7 +1083,7 @@ h6,
 }
 
 .bg-header {
-  background-color: #D5DAE1;
+  background-color: #dce0fd ;
   height: 80vh;
 }
 
@@ -1141,13 +1141,13 @@ h6,
 }
 
 .bg-header2 {
-  background-color: #D5DAE1;
+  background-color: #dce0fd ;
   height: 100vh;
 
 }
 
 .bg-header1 {
-  background-color: #D5DAE1;
+  background-color: #dce0fd ;
   min-height: 100vh;
 }
 

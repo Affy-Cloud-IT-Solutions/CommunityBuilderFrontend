@@ -17,7 +17,7 @@ export const CommunityById = () => {
                         <div className="col-12 pt-lg-5 mt-lg-5 text-center">
                             <h2 className="display-4 animated  fontt ">Tech Groups and Events: Connect Over Technology with OneConnect</h2>
                             <p className='tech_para mt-4'>Meet people who share your love of technology by joining tech OneConnect groups and tech events.  <br />Technology activities range from coding to fintech, and cloud security.</p>
-                            <Link to="#"><button class="btn py-md-2 px-md-4 rounded-pill quote_btn1 animated text-black">Join Group</button></Link>
+                            <Link to=""><button class="btn py-md-2 px-md-4 rounded-pill quote_btn1 animated text-black">Join Group</button></Link>
                         </div>
                     </div>
                 </div>

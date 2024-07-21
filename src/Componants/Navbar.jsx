@@ -63,10 +63,7 @@ export const Navbar = () => {
                             <Link to="/tech_startup" className="dropdown-item">Tech & Startups</Link>
                             <Link to='/Community_id' className="dropdown-item">demo</Link>
                         </div>
-                    </div>
-                    <li className="nav-item">
-                        <Link to="/product" className="nav-link">Product</Link>
-                    </li>
+                    </div>                    
                     <li className="nav-item">
                         <Link to="/contact" className="nav-link">Contact</Link>
                     </li>

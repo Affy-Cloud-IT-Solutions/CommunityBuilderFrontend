@@ -10,7 +10,7 @@ import {Product} from "./Pages/Product"
 import { AllCommunity } from "./Pages/AllCommunity";
 import { CommunityById } from "./Pages/CommunityById";
 import { TalkDash } from "./Pages/TalkDash";
-
+import { Login } from "./Pages/Login";
 
 
 function App() {
@@ -23,11 +23,11 @@ function App() {
            <Route path="/contact" element={<Contact/>} />
            <Route path="/Developer_community" element={<Developer/>}/>
            <Route path="/education_finance" element={<Education/>}/>
-           <Route path="/tech_startup" element={<Tech/>}/>
-           <Route path="/product" element={<Product/>}/>
+           <Route path="/tech_startup" element={<Tech/>}/>           
            <Route path="/all_community" element={<AllCommunity/>}/>
            <Route path="/Community_id" element={<CommunityById/>}/>
            <Route path="/Community_dash" element={<TalkDash/>}/>
+          
         </Routes>
       </Router>
     </div>
