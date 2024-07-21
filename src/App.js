@@ -6,11 +6,9 @@ import { Contact } from "./Pages/Contact";
 import { Developer } from "./Pages/Developer";
 import { Education } from "./Pages/Education";
 import {Tech} from "./Pages/Tech"
-import {Product} from "./Pages/Product"
 import { AllCommunity } from "./Pages/AllCommunity";
 import { CommunityById } from "./Pages/CommunityById";
 import { TalkDash } from "./Pages/TalkDash";
-import { Login } from "./Pages/Login";
 
 
 function App() {
