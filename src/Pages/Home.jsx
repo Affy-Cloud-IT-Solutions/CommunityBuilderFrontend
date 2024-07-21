@@ -1,4 +1,5 @@
 import { Navbar } from "../Componants/Navbar";
+import { Link } from 'react-router-dom';
 import { Footer } from "../Componants/Footer";
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -143,7 +144,7 @@ export const Home = () => {
                 <h1>Ready to grow your</h1>
                 <p className="mt-4 p"><span className="px-4 ">forum community?</span></p>
                 <p className="real mt-4">Provide real value to your audience. Talk with us to find out how.</p>
-                <button class="btn mt-3 py-md-3 px-md-5 me-3 rounded-pill quote_btn animated slideInLeft">Get In Touch</button>
+                <Link to="/contact"><button class="btn mt-3 py-md-3 px-md-5 me-3 rounded-pill quote_btn animated slideInLeft">Get In Touch</button></Link>
               </div>
             </div>
           </div>
