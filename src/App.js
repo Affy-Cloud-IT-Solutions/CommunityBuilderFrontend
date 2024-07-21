@@ -35,7 +35,7 @@ function App() {
            <Route path="/product" element={<Product/>}/>
            <Route path="/all_community" element={<AllCommunity/>}/>
           <Route path="/community/:id" element={<CommunityById />} />
-          <Route path="/Community_dash" element={<TalkDash />} />
+          <Route path="/:comm_id/Community_dash" element={<TalkDash />} />
           <Route path="/login" element={<Login />} />
 
         </Routes>

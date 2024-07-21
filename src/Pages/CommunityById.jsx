@@ -81,6 +81,7 @@ export const CommunityById = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     if (id) {
+      localStorage.setItem("communityId", id.toString());
       getCommunityById();
     }
   }, [id]);
@@ -93,7 +94,7 @@ export const CommunityById = () => {
       //   community.members.includes(userData && JSON.parse(userData)?._id)
       // ) {
       //   console.log("if");
-      //   navigate("/Community_dash");
+      //   navigate(`/${id}/Community_dash`);
       // } else {
       console.log("else");
       joinCommunity(token);

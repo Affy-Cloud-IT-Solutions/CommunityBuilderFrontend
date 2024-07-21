@@ -37,7 +37,8 @@ export const Login = () => {
           "userData",
           JSON.stringify(response.data.meta.user)
         );
-        navigate("/Community_dash");
+        let communityId = localStorage.getItem("communityId");
+        navigate(`/${communityId}/Community_dash`);
         setIsLoading(true);
       }
     } catch (err) {
