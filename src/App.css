@@ -1407,3 +1407,9 @@ h6,
 .community_pic{
   background-color: #dce0fd ;
 }
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

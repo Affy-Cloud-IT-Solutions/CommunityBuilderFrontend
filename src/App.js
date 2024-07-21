@@ -26,7 +26,7 @@ function App() {
            <Route path="/tech_startup" element={<Tech/>}/>
            <Route path="/product" element={<Product/>}/>
            <Route path="/all_community" element={<AllCommunity/>}/>
-           <Route path="/Community_id" element={<CommunityById/>}/>
+          <Route path="/community/:id" element={<CommunityById />} />
            <Route path="/Community_dash" element={<TalkDash/>}/>
         </Routes>
       </Router>
