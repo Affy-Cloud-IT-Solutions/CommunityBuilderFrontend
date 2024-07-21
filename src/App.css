@@ -4043,3 +4043,78 @@ h6,
   width: 130px;
   height: 70px;
 }
+
+
+
+
+/* ------------------login--------------- */
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(0deg, #8c6ea8, #f9f8ff, #b9e5ff); */
+  background-color: #fff;
+  /* background: linear-gradient(0deg, #003C43, #77B0AA, #135D66); */
+
+
+
+}
+
+.login-box {
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  /* border: 1px solid #1e1e54; */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 10px 10px 20px 5px rgba(23, 54, 180, 0.5);
+  background-color: #fff;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.form-control {
+  padding: 0.35rem 1.25rem;
+  border-radius: 8px;
+
+  /* border: 1px solid #0b0b27; */
+}
+
+.btn-block {
+  width: 100%;
+  background: linear-gradient(0deg, #0f185d, #16227f);
+  border: 1px solid #6d65cb;
+}
+
+.form-group .icon {
+  position: absolute;
+  right: 40px;
+  transform: translateY(-110%);
+  color: #0f185d;
+}
+
+
+/* .remember-forget {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+
+}
+
+.remember-forget label input {
+  margin-right: 10px;
+}
+
+.forget {
+  color: #000;
+}
+
+.register-link {
+  color: #000;
+} */
