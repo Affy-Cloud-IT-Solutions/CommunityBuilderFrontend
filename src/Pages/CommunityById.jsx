@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Navbar } from "../Componants/Navbar";
-import img from "../img/faceBubbles (1).webp";
 import { Footer } from "../Componants/Footer";
 import { fetchWeb } from "../utils/utils";
 import { ScaleLoader } from "react-spinners";
+import toast from "react-hot-toast";
 
 export const CommunityById = () => {
   let { id } = useParams();
+  let navigate = useNavigate();
+
+  let userData = localStorage.getItem("userData");
 
   const [isLoading, setIsLoading] = useState(true);
   const [networkError, setNetworkError] = useState("");
   const [community, setCommunity] = useState([]);
+
+  const [joinLoading, setJoinLoading] = useState(false);
+  const [joinError, setJoinError] = useState("");
 
   const getCommunityById = async () => {
     try {
@@ -37,12 +43,67 @@ export const CommunityById = () => {
     }
   };
 
+  const joinCommunity = async (token) => {
+    try {
+      setJoinError("");
+      setJoinLoading(true);
+      let headers = { Authorization: `Bearer ${token}` };
+      const response = await fetchWeb(
+        `/community/join`,
+        "post",
+        { communityId: id },
+        headers
+      );
+      console.log(response);
+      setJoinLoading(false);
+      toast.success(response.data.message);
+      getCommunityById();
+      navigate("/Community_dash");
+      if (response.data.error) {
+        setJoinLoading(false);
+        setJoinError(response.data.error);
+        return;
+      } else {
+        setCommunity(response.data.meta.community);
+        setJoinLoading(false);
+        // setIsLoading();
+      }
+    } catch (err) {
+      console.log("catch", err);
+      setJoinLoading(false);
+      const errorMessage =
+        err.response?.data?.message ||
+        "Something Went Wrong. Please Try Again Later.";
+      toast.error(errorMessage);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
     if (id) {
       getCommunityById();
     }
   }, [id]);
+
+  const joinGroup = () => {
+    let token = localStorage.getItem("cfs_token");
+    if (token) {
+      // if (
+      //   community &&
+      //   community.members.includes(userData && JSON.parse(userData)?._id)
+      // ) {
+      //   console.log("if");
+      //   navigate("/Community_dash");
+      // } else {
+      console.log("else");
+      joinCommunity(token);
+      // }
+    } else {
+      console.log("send to login");
+      navigate("/login");
+    }
+  };
+
   return (
     <>
       {isLoading && !networkError && (
@@ -74,8 +135,20 @@ export const CommunityById = () => {
                   </h2>
                   <p className="tech_para mt-4">{community.description}</p>
                   <Link to="#">
-                    <button class="btn py-md-2 px-md-4 rounded-pill quote_btn1 animated text-black">
-                      Join Group
+                    <button
+                      class="btn py-md-2 px-md-4 rounded-pill quote_btn1 animated text-black"
+                      onClick={joinGroup}
+                      // disabled={
+                      //   community &&
+                      //   community.members.includes("66989568273787338fb783e3")
+                      // }
+                    >
+                      {community &&
+                      community.members.includes(
+                        userData && JSON.parse(userData)?._id
+                      )
+                        ? "Go to community"
+                        : "Join Group"}
                     </button>
                   </Link>
                 </div>
@@ -87,7 +160,7 @@ export const CommunityById = () => {
               <div className="row">
                 <div className="col-lg-12 col-lg-12 d-flex justify-content-center align-items-center py-5">
                   <img
-                    src={community.images[0]}
+                    src={community && community?.images && community?.images[0]}
                     className="w-100 h-100"
                     alt="community_image"
                   />
