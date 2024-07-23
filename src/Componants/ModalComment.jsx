@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 
 const ModalComment = ({ onClose }) => {  
+import React, { useState } from "react";
+
+const ModalComment = ({ onClose }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     onClose();

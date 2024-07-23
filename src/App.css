@@ -25,7 +25,10 @@ body {
   background-color: #F5F7F8;
   overflow: auto;
 }
-
+.img_dec {
+  width: 100vw;
+  height: 70vh;
+}
 .imghome {
   margin-top: 15%;
 }
@@ -633,8 +636,8 @@ h6,
   .navbar-dark .navbar-nav .nav-link.show,
   .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 10px 0;
-    color: white;
-    background-color: #000;
+    color: black;
+      /* background-color: #000; */
   }
 
   .navbar-dark .navbar-brand h1 {
@@ -1083,7 +1086,7 @@ h6,
 }
 
 .bg-header {
-  background-color: #D5DAE1;
+  background-color: #dce0fd;
   height: 80vh;
 }
 
@@ -1141,13 +1144,13 @@ h6,
 }
 
 .bg-header2 {
-  background-color: #D5DAE1;
+  background-color: #dce0fd;
   height: 100vh;
 
 }
 
 .bg-header1 {
-  background-color: #D5DAE1;
+  background-color: #dce0fd;
   min-height: 100vh;
 }
 
