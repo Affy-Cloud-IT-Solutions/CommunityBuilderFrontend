@@ -58,7 +58,7 @@ export const CommunityById = () => {
       setJoinLoading(false);
       toast.success(response.data.message);
       getCommunityById();
-      navigate("/Community_dash");
+      navigate.push(`/${id}/Community_dash`);
       if (response.data.error) {
         setJoinLoading(false);
         setJoinError(response.data.error);
@@ -87,18 +87,19 @@ export const CommunityById = () => {
   }, [id]);
 
   const joinGroup = () => {
-    let token = localStorage.getItem("cfs_token");
+    let token = localStorage.getItem("csf_token");
+    console.log(token, id);
     if (token) {
-      // if (
-      //   community &&
-      //   community.members.includes(userData && JSON.parse(userData)?._id)
-      // ) {
-      //   console.log("if");
-      //   navigate(`/${id}/Community_dash`);
-      // } else {
-      console.log("else");
-      joinCommunity(token);
-      // }
+      if (
+        community &&
+        community.members.includes(userData && JSON.parse(userData)?._id)
+      ) {
+        console.log("if");
+        navigate(`/${id}/Community_dash`);
+      } else {
+        console.log("else");
+        joinCommunity(token);
+      }
     } else {
       console.log("send to login");
       navigate("/login");
@@ -135,23 +136,23 @@ export const CommunityById = () => {
                     <br /> {community.name}
                   </h2>
                   <p className="tech_para mt-4">{community.description}</p>
-                  <Link to="#">
-                    <button
-                      class="btn py-md-2 px-md-4 rounded-pill quote_btn1 animated text-black"
-                      onClick={joinGroup}
-                      // disabled={
-                      //   community &&
-                      //   community.members.includes("66989568273787338fb783e3")
-                      // }
-                    >
-                      {community &&
-                      community.members.includes(
-                        userData && JSON.parse(userData)?._id
-                      )
-                        ? "Go to community"
-                        : "Join Group"}
-                    </button>
-                  </Link>
+                  {/* <Link to="#"> */}
+                  <button
+                    class="btn py-md-2 px-md-4 rounded-pill quote_btn1 animated text-black"
+                    onClick={joinGroup}
+                    // disabled={
+                    //   community &&
+                    //   community.members.includes("66989568273787338fb783e3")
+                    // }
+                  >
+                    {community &&
+                    community.members.includes(
+                      userData && JSON.parse(userData)?._id
+                    )
+                      ? "Go to community"
+                      : "Join Group"}
+                  </button>
+                  {/* </Link> */}
                 </div>
               </div>
             </div>
@@ -159,7 +160,7 @@ export const CommunityById = () => {
           <div className="container-fluid community_pic">
             <div className="container">
               <div className="row">
-                <div className="col-lg-12 col-lg-12 d-flex justify-content-center align-items-center py-5">
+                <div className="col-lg-12 d-flex justify-content-center align-items-center img_dec mb-5">
                   <img
                     src={community && community?.images && community?.images[0]}
                     className="w-100 h-100"

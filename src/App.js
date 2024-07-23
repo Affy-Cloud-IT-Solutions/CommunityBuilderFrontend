@@ -5,8 +5,7 @@ import { About } from "./Pages/About";
 import { Contact } from "./Pages/Contact";
 import { Developer } from "./Pages/Developer";
 import { Education } from "./Pages/Education";
-import {Tech} from "./Pages/Tech"
-import {Product} from "./Pages/Product"
+import { Tech } from "./Pages/Tech"
 import { AllCommunity } from "./Pages/AllCommunity";
 import { CommunityById } from "./Pages/CommunityById";
 import { TalkDash } from "./Pages/TalkDash";
@@ -32,7 +31,7 @@ function App() {
            <Route path="/Developer_community" element={<Developer/>}/>
            <Route path="/education_finance" element={<Education/>}/>
            <Route path="/tech_startup" element={<Tech/>}/>
-           <Route path="/product" element={<Product/>}/>
+
            <Route path="/all_community" element={<AllCommunity/>}/>
           <Route path="/community/:id" element={<CommunityById />} />
           <Route path="/:comm_id/Community_dash" element={<TalkDash />} />

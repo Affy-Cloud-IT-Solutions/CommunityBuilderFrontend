@@ -91,12 +91,12 @@ export const AllCommunity = () => {
       )}
       {!isLoading && !networkError && (
         <div class="container-fluid bbb">
-          {communities &&
-            communities.length > 0 &&
-            communities.map((community) => {
-              return (
-                <div class="container py-5">
-                  <div class="row g-3">
+          <div class="container py-5">
+            <div class="row g-3">
+              {communities &&
+                communities.length > 0 &&
+                communities.map((community) => {
+                  return (
                     <div class="col-lg-4 col-md-6  ">
                       <Link to={`/community/${community._id}`}>
                         {" "}
@@ -111,15 +111,17 @@ export const AllCommunity = () => {
                               alt=""
                             />
                           </div>
-                          <h4 className="mt-5 text-center">{community.name}</h4>
+                          <h4 className="mt-5 text-center ">
+                            {community.name}
+                          </h4>
                           <p>{community.description}...</p>
                         </div>
                       </Link>
                     </div>
-                  </div>
-                </div>
-              );
-            })}
+                  );
+                })}
+            </div>
+          </div>
         </div>
       )}
       <div class="container-fluid last">

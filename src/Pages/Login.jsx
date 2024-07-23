@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { fetchWeb } from "../utils/utils";
 // import { LOGIN_URL } from '../api';
-// import logo from "../img/affy_logo.png"
+import logo from "../img/logoo.png";
 // import { Dashnavbar } from '../Componants/Dashnavbar';
 
 export const Login = () => {
@@ -66,7 +66,7 @@ export const Login = () => {
                 <div className="text-center mb-3">
                   <a href="#">
                     <img
-                      // src={logo}
+                      src={logo}
                       alt="BootstrapBrain Logo"
                       width="125"
                       height="95"

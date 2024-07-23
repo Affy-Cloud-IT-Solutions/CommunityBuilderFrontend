@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { fetchWeb } from "../utils/utils";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-const Modal = ({ onClose }) => {
+const Modal = ({ onClose, getPostsByCommunity }) => {
   const [description, setDescription] = useState("");
 
   let navigate = useNavigate("");
+  let communityId = localStorage.getItem("communityId");
 
   const [isLoading, setIsLoading] = useState(true);
   const [networkError, setNetworkError] = useState("");
@@ -15,12 +16,8 @@ const Modal = ({ onClose }) => {
     "https://img.freepik.com/premium-photo/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg";
   const name = "Mohammad khalid";
 
-  const handleSubmit = (event) => {
+  const createPost = async (event) => {
     event.preventDefault();
-    onClose();
-  };
-
-  const createPost = async () => {
     let token = localStorage.getItem("csf_token");
     try {
       setNetworkError("");
@@ -31,20 +28,23 @@ const Modal = ({ onClose }) => {
         "post",
         {
           textMessage: description,
-          communityId: "id",
+          communityId: communityId,
         },
         headers
       );
       console.log(response);
       setIsLoading(false);
-      toast.success(response.data.message);
-      navigate("/Community_dash");
+
       if (response.data.error) {
         setIsLoading(false);
         setNetworkError(response.data.error);
         return;
       } else {
         setIsLoading(false);
+        onClose();
+        toast.success(response.data.message);
+        navigate(`/${communityId}/Community_dash`);
+        getPostsByCommunity();
         // setIsLoading();
       }
     } catch (err) {
@@ -73,7 +73,7 @@ const Modal = ({ onClose }) => {
           />
           <h4>{name}</h4>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={createPost}>
           <div className="mb-3">
             <label htmlFor="description" className="form-label">
               Write Here
